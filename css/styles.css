@@ -1,0 +1,282 @@
+/*Roboto 400, Abril Fatface 400, Noto Sans Korean, Lato 300, Noto Serif Display 300&400&500*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans+KR:wght@300&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300;400;500&display=swap');
+
+/*Color Palette*/
+
+:root {
+    --light-color: #f0f0c9;
+    --dark-color: #6e0e0a;
+    --primary-color: #124e78;
+    --secondary-color: #2a9d8f;
+    --accent-color: #f2bb05;
+    --tertiary-color: #d74e09;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100%;
+}
+/*header*/
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    font-size: 21px;
+    font-family: 'Abril Fatface';
+    border-bottom: 2px solid var(--primary-color);
+
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(240, 255, 255);
+}
+
+nav ul a {
+    margin: 0 15px;
+    padding-bottom: 2px;
+    color: var(--primary-color);
+}
+
+nav ul a:hover {
+    border-bottom: 1.5px solid var(--primary-color);
+}
+
+header .btn {
+    padding: 6px 50px 8px;
+    background-image: linear-gradient(110deg, var(--primary-color), rgb(122, 193, 251));
+    border-radius: 20px;
+}
+
+header .btn:hover {
+    transform: scale(0.98);
+}
+
+.fa-house,
+.fa-address-book {
+    padding-right: 7px;
+}
+
+/*Intro*/
+
+.intro-text {
+    height: 500px;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.container-text {
+    text-align: center;
+    color: var(--primary-color);
+    border-radius: 90px;
+    flex-basis: 56%;
+    margin: 50px 0 4px;
+
+
+}
+
+.container-text h1 {
+    font: 90px 'Abril Fatface';
+}
+
+.container-text h2 {
+    font: 45px 'Abril Fatface';
+    padding-bottom: 17px;
+}
+
+.container-text p {
+    font: 28px 'Noto Serif Display';
+    font-weight: 600;
+    padding: 5px 8px;
+}
+
+.container-image {
+    display: block;
+    width: 100%;
+}
+
+.intro-text img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 400px;
+    object-fit: fill;
+}
+
+/*Main*/
+
+main {
+    width: inherit;
+}
+
+.container-main {
+    padding: 60px 60px 20px;
+    font-family: 'Abril Fatface';
+    display: grid;
+    margin: 0;
+    grid-template-columns: 50% 50%;
+}
+
+.container-main img {
+    width: 100px;
+}
+
+.container-main h2 {
+
+    font-size: 50px;
+    grid-column: 1 / span 2;
+    padding-bottom: 50px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.card {
+    font-family: 'Noto Serif Display';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(78, 113, 237, 0.1);
+    min-width: 500px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.card:hover {
+    transform: scale(0.99);
+}
+
+.song-full-info {
+    display: flex;
+    justify-content: center;
+}
+
+.song-text-info {
+    padding-left: 15px;
+}
+
+.song-full-info img {
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 20px;
+}
+
+.card h4 {
+    font-size: 15px;
+}
+
+.fa-arrow-right {
+    padding-left: 5px;
+}
+
+.card a {
+    color: var(--primary-color);
+}
+
+.card a:hover {
+    color: var(--secondary-color);
+    font-size: 17px;
+}
+
+
+
+/*Footer*/
+
+ footer {
+    margin-top: 60px;
+    height: 100px;
+    background-color: var(--primary-color);
+ }
+
+ @media (max-width: 1000px) {
+     .container-main {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+
+     header {
+         flex-direction: column;
+         padding: 40px 0 60px;
+     }
+
+     header>* {
+         padding: 10px 0;
+     }
+
+
+    header a {
+        font-size: 17px;
+    }
+
+    .container-text {
+        transform: scale(0.7);
+    }
+
+ }
+
+ @media (max-width: 1200px) {
+     .container-text {
+         transform: scale(0.7);
+     }
+ }
+
+ @media (max-width: 700px) {
+
+     .container-text h1 {
+         font: 70px 'Abril Fatface';
+     }
+     .container-text h2 {
+         font: 40px 'Abril Fatface';
+     }
+
+     .card {
+        max-width: 350px;
+     }
+
+ }
+
+ @media (max-width: 500px) {
+
+    .card {
+        max-width: 100px;
+    }
+
+
+    .container-main h2 {
+        font-size: 30px;
+    }
+
+    .container-main img {
+        width: 50px;
+    }
+
+
+ }
